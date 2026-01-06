@@ -1,35 +1,48 @@
 ---
 theme:
+  name: catppuccin-latte
   override:
     footer:
       style: template
       left:
         image: ./assets/jj.png
-      center: '**Introduction** to <span class="noice">_Jujutsu_</span>'
+      center: '**Introduction** to _Jujutsu_'
       right: "{current_slide} / {total_slides}"
       height: 3
     palette:
       classes:
         noice:
-          foreground: blue
+          foreground: #FF8C00
 ---
+<!-- no_footer -->
+<!-- newlines: 6 -->
+
+![image:width:30%](./assets/jj.png)
+
+<!-- alignment: center -->
+**Introduction** to <span class="noice">_Jujutsu_</span>
+
+<!-- alignment: center -->
+
+<span style="color: blue">Thomas Fisker Christensen</span>
+
+<!-- end_slide -->
+
+# WHAT IS _Jujutsu_?
 
 <!-- newlines: 6 -->
 
-![](./assets/jj.png)
-
-<!-- end_slide -->
-# what is it?
-
-- [Jujutsu](https://github.com/jj-vcs/jj) is a powerful version control system for software projects. <https://www.jj-vcs.dev/latest/>
+- it is a powerful version control system for software projects.
 - initially developed by Martin von Zweigbergk (employed at Google)
   - now part of the jj-vcs org on github
-- used at Google, being rolled out for GA in [the beginning of 2026](https://www.youtube.com/watch?v=v9Ob5yPpC0A)
+- used at Google, being rolled out for _General Availability_ in [the beginning of 2026](https://www.youtube.com/watch?v=v9Ob5yPpC0A)
   - using a different backend (not git) for their monorepo
 
 <!-- end_slide -->
 
-# big ideas
+# FIVE BIG IDEAS
+
+<!-- newlines: 6 -->
 
 - automatic snapshotting 🎰
 - atomatic rebasing ♻️
@@ -39,7 +52,7 @@ theme:
 
 <!-- end_slide -->
 
-# automatic snapshotting
+# AUTOMATIC SNAPSHOTTING
 
 - everything is always "checked" in (no dirty copy)
   - means you are always free to move around
@@ -56,9 +69,12 @@ theme:
 
 # automatic rebasing
 
+<!-- jump_to_middle -->
+more on this later...
+
 <!-- end_slide -->
 
-# anonymous first
+# ANONYMOUS FIRST
 
 - branches:
   - name when you are ready to share with others
@@ -67,9 +83,9 @@ theme:
 
 <!-- end_slide -->
 
-# first class conflicts
+# FIRST CLASS CONFLICTS
 
-- conflicts are first class: are stored in your tree and can be solved later, in one go or in many smaller attempts.
+- conflicts are stored in your tree and can be solved later, in one go or in many smaller attempts.
   - stored in commits
     - the inputs to the merge
     - cheap to recalculate what a conflict is
@@ -79,8 +95,13 @@ theme:
 
 <!-- end_slide -->
 
-# aside: [mergiraf](https://mergiraf.org/)
+# aside
 
+![image:width:30%](assets/2026-01-06-20-57-19.png)
+<!-- end_slide -->
+
+# [mergiraf](https://mergiraf.org/)
+  
 resolving conflicts at 60 km/h
 
 - Rust (`*.rs`)
@@ -91,30 +112,38 @@ resolving conflicts at 60 km/h
 - C# (`*.cs`)
 - Python (`*.py`)
 
+```bash
+jj mergiraf
+```
+
 <!-- end_slide -->
 
-![mergiraf](assets/mergiraf1.png)
+![image:width:50%](assets/mergiraf1.png)
 <!-- end_slide -->
 
-![mergiraf2](assets/mergiraf2.png)
+![image:width:50%](assets/mergiraf2.png)
 <!-- end_slide -->
 
-![mergiraf3](assets/mergiraf3.png)
+![image:width:50%](assets/mergiraf3.png)
 <!-- end_slide -->
 
 # git backend
 
+<!-- jump_to_middle -->
 - transparent to others
 - git is ubiquitous
 - git has "ok"-ish UX
 
 <!-- end_slide -->
 
-# Stockholm syndrome?
+# Stockholm syndrome? 🇸🇪 🫎
 
-- who here uses vanilla git in the commandline without any aliases or helper scripts?
+<!-- jump_to_middle -->
+> a _psychological_ coping mechanism where **hostages** or **abuse victims** develop _positive feelings_, _empathy_, or even _loyalty_ toward their **captors** or **abusers**
 
-> a psychological coping mechanism where hostages or abuse victims develop positive feelings, empathy, or even loyalty toward their captors or abusers
+- who here uses **vanilla** commandline git󰊢?
+  - **(without any aliases or helper scripts)**?
+- blink twice if you are being held against your will 😉
 
 <!-- end_slide -->
 
@@ -144,10 +173,13 @@ resolving conflicts at 60 km/h
 
 # link dump
 
+Homepage:  <https://www.jj-vcs.dev/latest/>
+Github: <https://github.com/jj-vcs/jj>
+
  [Solving Git's Pain Points with Jujutsu (with Martin von Zweigbergk)](https://www.youtube.com/watch?v=ulJ_Pw8qqsE)
  <https://schpet.com/note/why-i-think-jj-vcs-is-worth-your-time>
  <https://steveklabnik.github.io/jujutsu-tutorial/>
  <https://flames-of-code.netlify.app/blog/my-jj-workflow/>
  [Jujutsu in practice](https://arne.me/blog/jj-in-practice)
- [Jujutsu (jj), a git compatible VCS - Tony Finn](https://tonyfinn.com/blog/jj/) also mentions potential issues when using with nix flakes
+ [Jujutsu (jj), a git compatible VCS - Tony Finn](https://tonyfinn.com/blog/jj/)
  <https://etodd.io/2025/10/02/should-i-switch-from-git-to-jujutsu/>
