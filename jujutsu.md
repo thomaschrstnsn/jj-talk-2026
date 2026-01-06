@@ -1,6 +1,6 @@
 ---
 theme:
-  name: catppuccin-latte
+  name: catppuccin-frappe
   override:
     footer:
       style: template
@@ -12,7 +12,7 @@ theme:
     palette:
       classes:
         noice:
-          foreground: #FF8C00
+          foreground: "FF8C00"
 ---
 <!-- no_footer -->
 <!-- newlines: 6 -->
@@ -24,19 +24,19 @@ theme:
 
 <!-- alignment: center -->
 
-<span style="color: blue">Thomas Fisker Christensen</span>
+## <span class="noice">_**Thomas Fisker Christensen**_</span>
 
 <!-- end_slide -->
 
-# WHAT IS _Jujutsu_?
+# WHAT IS <span class="noice">_Jujutsu_</span>?
 
 <!-- newlines: 6 -->
 
 - it is a powerful version control system for software projects.
-- initially developed by Martin von Zweigbergk (employed at Google)
+- initially developed by _Martin von Zweigbergk_ (@ Google)
   - now part of the jj-vcs org on github
 - used at Google, being rolled out for _General Availability_ in [the beginning of 2026](https://www.youtube.com/watch?v=v9Ob5yPpC0A)
-  - using a different backend (not git) for their monorepo
+  - Google use a different backend (not git) for their monorepo
 
 <!-- end_slide -->
 
@@ -57,20 +57,44 @@ theme:
 - everything is always "checked" in (no dirty copy)
   - means you are always free to move around
   - everything is always comitted
-  - commit: way of storing your changes, not necessarily ready to share (free to return to it and refine later)
+    - _commit_: way of storing your changes, not necessarily ready to share (free to return to it and refine later)
   - every (non-ignored) file is always added
   - undeniably simpler™
-    - contrast with:
+    - contrast with git:
       - branch (naming is hard)
-      - stage before commit,
+      - stage before commit
       - commit
 
 <!-- end_slide -->
 
-# automatic rebasing
+# AUTOMATIC REBASING
 
 <!-- jump_to_middle -->
-more on this later...
+
+> constantly in the middle of an interactive rebase
+
+```mermaid +render
+---
+config:
+  themeVariables:
+    'git0': '#00F000'
+
+  gitGraph:
+    showBranches: false
+---
+gitGraph
+   commit
+   commit id: "alpha" type: HIGHLIGHT
+   commit
+   commit id: "beta" type: HIGHLIGHT
+   commit
+   branch thought
+   commit id: "gamma"
+   commit
+   commit
+   checkout main
+   commit id: "sigma" type: HIGHLIGHT
+```
 
 <!-- end_slide -->
 
@@ -98,22 +122,27 @@ more on this later...
 # aside
 
 ![image:width:30%](assets/2026-01-06-20-57-19.png)
-<!-- end_slide -->
-
-# [mergiraf](https://mergiraf.org/)
+<!-- alignment: center -->
+[mergiraf](https://mergiraf.org/)
   
 resolving conflicts at 60 km/h
 
+<!-- end_slide -->
+
+# [mergiraf](https://mergiraf.org/)
+
+## Language semantics guided merge tool 🪄✨
+  
 - Rust (`*.rs`)
-- Go (`*.go`)
-- Javascript (`*.js, *.jsx, *.mjs`)
-- TypeScript (`*.ts, *.tsx`)
+- Javascript (`*.js, *.jsx, *.mjs`), TypeScript (`*.ts, *.tsx`)
 - C/C++ (`*.c, *.h, *.cc, *.hh, *.cpp, *.hpp, *.cxx, *.hxx, *.c++, *.h++, *.mpp, *.cppm, *.ixx, *.tcc`)
 - C# (`*.cs`)
 - Python (`*.py`)
 
+Supported out of the box in _Jujutsu_:
+
 ```bash
-jj mergiraf
+jj resolve --tool mergiraf
 ```
 
 <!-- end_slide -->
@@ -127,10 +156,16 @@ jj mergiraf
 ![image:width:50%](assets/mergiraf3.png)
 <!-- end_slide -->
 
+<!-- jump_to_middle -->
+<!-- alignment: center -->
+
+back to _Jujutsu_
+<!-- end_slide -->
+
 # git backend
 
 <!-- jump_to_middle -->
-- transparent to others
+- <span class="noice">jj</span> is transparent to others _(git users)_
 - git is ubiquitous
 - git has "ok"-ish UX
 
@@ -147,39 +182,34 @@ jj mergiraf
 
 <!-- end_slide -->
 
-# what I love ❤️
+# WHAT I LOVE ❤️ _FLUIDITY OF MOVING AROUND_ 🪾
 
-## fluidity of moving around
-
-- try many different approaches, capture them all and compare in VCS (not just in editor undo history)
-  - squash
-  - rearrange
-  - rebase
-  - edit
-
-<!-- end_slide -->
-
-# operations log
-
-- undo any operation
+- try different approaches, capture them all in _VCS_ (not just in editor undo history)
+<!-- list_item_newlines: 1 -->
+- branch 
+- squash 🥒
+- split 🪓
+- abort ❌
+- rearrange 
+- rebase 󰡓
+- edit 
+- duplicate 
+<!-- list_item_newlines: 2 -->
+- leads to **fearless** _iteration/experimentation_ 🧪⚗️
+  - without ever getting in the way ❤️🙏
 
 <!-- end_slide -->
 
 # demo
 
-- uses [jjui](https://github.com/idursun/jjui)
+![image:width:50%](assets/2026-01-06-22-12-41.png)
+
+<!-- alignment: center -->
+
+using [jjui](https://github.com/idursun/jjui)
 
 <!-- end_slide -->
 
-# link dump
+# LINK DUMP
 
-Homepage:  <https://www.jj-vcs.dev/latest/>
-Github: <https://github.com/jj-vcs/jj>
-
- [Solving Git's Pain Points with Jujutsu (with Martin von Zweigbergk)](https://www.youtube.com/watch?v=ulJ_Pw8qqsE)
- <https://schpet.com/note/why-i-think-jj-vcs-is-worth-your-time>
- <https://steveklabnik.github.io/jujutsu-tutorial/>
- <https://flames-of-code.netlify.app/blog/my-jj-workflow/>
- [Jujutsu in practice](https://arne.me/blog/jj-in-practice)
- [Jujutsu (jj), a git compatible VCS - Tony Finn](https://tonyfinn.com/blog/jj/)
- <https://etodd.io/2025/10/02/should-i-switch-from-git-to-jujutsu/>
+<!-- include: links.md -->
