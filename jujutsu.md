@@ -17,7 +17,20 @@ theme:
 <!-- no_footer -->
 <!-- newlines: 6 -->
 
-![image:width:30%](./assets/jj.png)
+![image:width:100%](assets/2026-01-07-09-15-43.png)
+<!-- alignment: center -->
+**Introduction** to <span class="noice">_Jujutsu_</span>
+
+<!-- alignment: center -->
+
+## <span class="noice">_**Thomas Fisker Christensen**_</span>
+
+<!-- end_slide -->
+
+<!-- no_footer -->
+<!-- newlines: 6 -->
+
+![image:width:70%](./assets/jj.png)
 
 <!-- alignment: center -->
 **Introduction** to <span class="noice">_Jujutsu_</span>
