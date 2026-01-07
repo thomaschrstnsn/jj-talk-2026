@@ -35,12 +35,12 @@ theme:
 - it is a powerful version control system for software projects.
 - initially developed by _Martin von Zweigbergk_ (@ Google)
   - now part of the jj-vcs org on github
-- used at Google, being rolled out for _General Availability_ in [the beginning of 2026](https://www.youtube.com/watch?v=v9Ob5yPpC0A)
-  - Google use a different backend (not git) for their monorepo
+- used at Google, being rolled out for _General Availability_ in [the beginning of 2026](https://www.youtube.com/watch?v=v9Ob5yPpC0A) for their monorepo
+  - Google use a different backend (not git)
 
 <!-- end_slide -->
 
-# FIVE BIG IDEAS
+# <span class="noice">_Jujutsu_</span>'s FIVE BIG IDEAS
 
 <!-- newlines: 6 -->
 
@@ -57,13 +57,14 @@ theme:
 - everything is always "checked" in (no dirty copy)
   - means you are always free to move around
   - everything is always comitted
-    - _commit_: way of storing your changes, not necessarily ready to share (free to return to it and refine later)
+    - way of storing your changes
+    - not necessarily ready to share (free to return to it and refine later)
   - every (non-ignored) file is always added
-  - undeniably simpler™
+  - _undeniably simpler_™
     - contrast with git:
       - branch (naming is hard)
       - stage before commit
-      - commit
+      - commit (naming is hard)
 
 <!-- end_slide -->
 
@@ -76,9 +77,7 @@ theme:
 ```mermaid +render
 ---
 config:
-  themeVariables:
-    'git0': '#00F000'
-
+  theme: neutral
   gitGraph:
     showBranches: false
 ---
@@ -100,9 +99,11 @@ gitGraph
 
 # ANONYMOUS FIRST
 
-- branches:
+<!-- jump_to_middle -->
+
+- _**branches**_:
   - name when you are ready to share with others
-- changes/commits:
+- _**changes/commits**_:
   - describe when you are sure should how you want to "tell your story"
 
 <!-- end_slide -->
@@ -116,13 +117,14 @@ gitGraph
 
 <!-- column: 1 -->
 
-- conflicts are stored in your tree and can be solved later, in one go or in many smaller attempts.
-  - stored in commits
-    - the inputs to the merge
-    - cheap to recalculate what a conflict is
-      - re-evaluate if it has been resolved
-  - jump around and do the work and resolve conflicts when it suits you
-    - contrast: in git conflicts are "stop the world" events 😢
+- conflicts are stored in your tree and can be solved later
+- in one go or in many smaller attempts
+- stored in commits
+  - the inputs to the merge
+  - cheap to recalculate what a conflict is
+    - re-evaluate if it has been resolved
+- jump around and do the work and resolve conflicts when it suits you
+  - contrast: in git conflicts are "🚨stop the world🚨" events 😢
 
 <!-- end_slide -->
 
@@ -171,11 +173,13 @@ back to _Jujutsu_
 
 # PLUGGABLE BACKEND
 
-- git and "google"
+- all the backends
+  - "google"
+  - git
 
 <!-- jump_to_middle -->
-- <span class="noice">jj</span> is transparent to others _(git users)_
-- git is ubiquitous
+- git is everywhere
+- <span class="noice">_Jujutsu_</span> is transparent to others _(git users)_
 - git has "ok"-ish UX
 
 <!-- end_slide -->
