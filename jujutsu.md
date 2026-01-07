@@ -27,10 +27,17 @@ theme:
 
 <!-- end_slide -->
 
+<!-- jump_to_middle -->
+
+> _"Jū"_ can be translated as "gentle, soft, supple, flexible, pliable, or yielding"
+
+> _"jutsu"_ can be translated as "art or technique"
+<!-- end_slide -->
+
 <!-- no_footer -->
 <!-- newlines: 6 -->
 
-![image:width:70%](./assets/jj.png)
+![image:width:30%](./assets/jj.png)
 
 <!-- alignment: center -->
 **Introduction** to <span class="noice">_Jujutsu_</span>
@@ -256,8 +263,10 @@ back to _Jujutsu_
 
 # 🙈 UNDO EVERYTHING ⏪
 
+<!-- jump_to_middle -->
+
 - `jj undo`
-- `jj oplog`
+- `jj op log`: inspect operation log
 - contrast with git:
   - `git reset`
     - hard, soft, mixed
