@@ -48,7 +48,7 @@ theme:
 - atomatic rebasing ♻️
 - anonymous first 🎭
 - first class conflicts ⚠️
-- git compatible 
+- pluggable backend 
 
 <!-- end_slide -->
 
@@ -109,6 +109,13 @@ gitGraph
 
 # FIRST CLASS CONFLICTS
 
+<!-- column_layout: [1, 5] -->
+<!-- column: 0 -->
+
+![image:width:100%](assets/2026-01-07-07-19-39.png)
+
+<!-- column: 1 -->
+
 - conflicts are stored in your tree and can be solved later, in one go or in many smaller attempts.
   - stored in commits
     - the inputs to the merge
@@ -162,7 +169,9 @@ jj resolve --tool mergiraf
 back to _Jujutsu_
 <!-- end_slide -->
 
-# git backend
+# PLUGGABLE BACKEND
+
+- git and "google"
 
 <!-- jump_to_middle -->
 - <span class="noice">jj</span> is transparent to others _(git users)_
@@ -200,13 +209,52 @@ back to _Jujutsu_
 
 <!-- end_slide -->
 
+# REWRITING HISTORY - HERECY 🧙
+
+<!-- column_layout: [1, 4] -->
+
+<!-- column: 0 -->
+
+![image:width:100%](assets/2026-01-07-07-42-41.png)
+
+<!-- column: 1 -->
+
+<!-- jump_to_middle -->
+
+> accountants don't use erasers
+
+- immutable vs mutable commits
+- [configurable](https://docs.jj-vcs.dev/latest/config/#set-of-immutable-commits) to suit your needs
+
+<!-- end_slide -->
+
+# JJ VERSUS STASHING 🧺
+
+<!-- jump_to_middle -->
+
+- git stashes are extremely linear
+- <span class="noice">_Jujutsu_</span>'s fluidity and constant snapshotting replace the whole concept
+
+<!-- end_slide -->
+
+# 🙈 UNDO EVERYTHING ⏪
+
+- `jj undo`
+- `jj oplog`
+- contrast with git:
+  - `git reset`
+    - hard, soft, mixed
+  - `git reflog`
+
+<!-- end_slide -->
+
 # demo
 
 ![image:width:50%](assets/2026-01-06-22-12-41.png)
 
 <!-- alignment: center -->
 
-using [jjui](https://github.com/idursun/jjui)
+with help from `jj` and [`jjui`](https://github.com/idursun/jjui)
 
 <!-- end_slide -->
 
