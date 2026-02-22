@@ -49,4 +49,14 @@ transition:
   animation:
     style: collapse_horizontal
 
+export:
+  dimensions:
+    columns: 143
+    rows: 45
+  pdf:
+    fonts:
+      normal: /System/Library/Fonts/Menlo.ttc
+      italic: /System/Library/Fonts/Menlo.ttc
+      bold: /System/Library/Fonts/Menlo.ttc
+      bold_italic: /System/Library/Fonts/Menlo.ttc
 
